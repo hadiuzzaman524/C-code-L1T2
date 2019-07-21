@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{    int a,c,d;
+    int date,month,year;
+    printf("enter the current date:");
+    scanf("%d",&date);
+    printf("enter the current month:");
+    scanf("%d",&month);
+    printf("enter the current year:");
+    scanf("%d",&year);
+
+    printf("\n\n\n");
+
+    printf("Enter your date of birth year:");
+    scanf("%d",&a);
+    printf("Enter your date of month:");
+    scanf("%d",&c);
+    printf("Enter the birth date:");
+    scanf("%d",&d);
+    printf("\n\n\n");
+    if(d>date)
+    {
+        date=date+30;
+        date=d-date;
+        c=c+1;
+    }
+    else
+        date=date-d;
+    if(c>month)
+    {
+        month=month+12;
+        month=c-month;
+        a=a+1;
+    }
+    else
+    {
+      month=month-c;
+    }
+
+
+
+        year=a-year;
+
+
+    printf("Your age:%d year %d month %d day",year,month,date);
+    return 0;
+    }
+
+

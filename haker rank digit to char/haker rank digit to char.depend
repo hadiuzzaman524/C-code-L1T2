@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1539265327 source:c:\users\hadiuzzaman\desktop\5th batch q\haker rank digit to char\main.c
+	<stdio.h>
+	<string.h>
+	<math.h>
+	<stdlib.h>
+

@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{
+   int m[5][6],s[5][6],c[6],mvalue[5][6],svalue[5][6],mweek[5],sweek[5],mproduct[6],sproduct[6],mtotal,stotal,i,j,number; 
+   printf("enter products manufactured week wise\n\n");
+   printf("m11,m12,-,m21,m22,-,etc\n");
+   for(i=1; i<=4; i++)
+    for(j=1; j<=5; j++)
+    scanf("%d",&m[i][j]);
+   printf("enter products sold week wise\n");
+   printf("s11,s12,-,s21,s22,-,etc\n");
+   for(i=1; i<=4; i++)
+    for(j=1; j<=5; j++)
+    scanf("%d",&s[i][j]);
+   printf("enter cost of each product\n");
+   for(j=1; j<=4; j++)
+   scanf("%d",&c[j]);
+   for(i=1; i<=4; i++)
+    for(j=1; j<=5; j++)
+   {
+       mvalue[i][j]=m[i][j]*c[j];
+       svalue[i][j]=s[i][j]*c[j];
+   }
+   for(i=1; i<=4; i++)
+   {
+       mweek[i]=0;
+       sweek[i]=0;                                                                      
+   }
+    return 0;
+}

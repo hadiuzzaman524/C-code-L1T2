@@ -1,0 +1,53 @@
+#include <stdio.h>
+int main()
+{
+    int ara1[3];
+    int ara2[3];
+    int a = 0;
+    int b = 0;
+    int i;
+
+    for(i = 0; i<=2; i++)
+    {
+        scanf("%d",&ara1[i]);
+
+    }
+
+    for(i = 0; i<=2; i++)
+    {
+        scanf("%d",&ara2[i]);
+    }
+
+    if(ara1[0] > ara2[0] && ara1[0] != ara2[0])
+        {
+            a = a + 1;
+        }
+    else if(ara1[0] < ara2[0] && ara1[0] != ara2[0])
+        {
+            b = b + 1;
+        }
+
+
+    if(ara1[1] > ara2[1] && ara1[1] != ara2[1])
+        {
+            a = a + 1;
+        }
+
+    else if(ara1[1] < ara2[1] && ara1[1] != ara2[1])
+        {
+            b = b + 1;
+        }
+
+
+    if(ara1[2] > ara2[2] && ara1[2] != ara2[2])
+        {
+            a = a + 1;
+        }
+
+    else if(ara1[2] < ara2[2] && ara1[2] != ara2[2])
+        {
+            b = b + 1;
+        }
+   printf("%d %d",a,b);
+   return 0;
+}

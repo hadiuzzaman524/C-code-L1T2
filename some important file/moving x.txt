@@ -1,0 +1,55 @@
+#include <graphics.h>
+#include <conio.h>
+#include <dos.h>
+#include <process.h>
+
+int main()
+{
+    int gd=DETECT,gm,c=0,i=250,j=250,x=0,y=0;
+    initgraph(&gd,&gm,"C:\\TC\\BGI");
+    while(1)
+    {
+        circle(i,j,15);
+        outtextxy(200,20,"press 'q' to quit");
+        if(kbhit())
+        {
+            c=getch();
+            if(c==72)
+            {
+                x=0;
+                y=-1;
+            }
+            if(c==75)
+            {
+              x=-1;
+              y=0;
+            }
+            if(c==77)
+            {
+                x=1;
+                y=0;
+            }
+            if(c==80)
+            {
+                x=0;
+                y=1;
+            }
+            if(c==113)
+                exit(0);
+
+        }
+
+
+        i=i+x;
+        j=j+y;
+        delay(10);
+        cleardevice();
+
+    }
+
+    getch();
+    closegraph();
+
+    return 0;
+
+    }

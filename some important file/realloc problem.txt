@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define NULL 0
+
+int main()
+{
+    char*buffer;
+    if((buffer=(char*)malloc(10))==NULL)
+    {
+        printf("malloc failed\n");
+        exit(1);
+    }
+    printf("buffer of size %d created\n",(buffer));
+    strcpy(buffer,"hyderabad");
+    printf("\n buffer contain : %s\n",buffer);
+    if((buffer=(char*)realloc(buffer,15))==NULL)
+    {
+        printf("reallocation failed.\n");
+        exit(1);
+    }
+    printf("\nbuffer size modifier.\n");
+    printf("\nbuffer still contains: %s\n",buffer);
+    strcpy(buffer,"SECUNDERABAD");
+    printf("\nbuffer now contains:%s\n",buffer);
+    free(buffer);
+}
+xs

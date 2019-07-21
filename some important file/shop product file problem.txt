@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct item{
+char name[100];
+float quantity;
+
+};
+
+int main()
+{
+    struct item myproduct[5];
+    for(int i=0; i<5; i++)
+    {
+        printf("enter p name:");
+        gets(myproduct[i],name);
+        printf("enter amount :");
+        scanf("%f",&myproduct[i],quantity);
+        fflush(stdin);
+    }
+    FILE fp=fopen("E:\jaman.txt","w");
+    fwrite(&myproduct[0],104,5,fp);
+    fclose(fp);
+
+    fp=fopen("E:\jaman.txt""r+b");
+    fseek=(fp,308,SEEK_SET);
+    float x=17.0;
+
+    fwrite(&x,4,1,fp);
+    char c[]="banana";
+    fwrite(&c[0],strlen(c)+1,1,fp);
+
+    return 0;
+}

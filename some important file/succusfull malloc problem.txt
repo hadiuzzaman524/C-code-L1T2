@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int **ara,num[12];
+    int i,j,n,total_classes;
+    printf("how many class are there:");
+    scanf("%d",&total_classes);
+
+    ara=(int**)malloc(sizeof(int*)*total_classes);
+    if(ara==NULL)
+    {
+        printf("memory are not allocated");
+        return 1;
+    }
+    else
+    {
+        for(i=0; i<total_classes; i++)
+        {
+            printf("how many student in the class %d",i+1);
+            scanf("%d",&n);
+
+            num[i]=n;
+            ara[i]=(int*)malloc(sizeof(int)*n);
+            if(ara==NULL)
+            {
+                printf("memory are not allocated");
+            }
+            else
+            {
+                for(j=0; j<n; j++)
+                {
+                    scanf("%d",&ara[i][j]);
+                }
+            }
+        }
+
+
+        for(i=0; i<total_classes; i++)
+        {
+            printf("class:%d",i+1);
+            for(j=0; j<num[i]; j++)
+                printf("%4d",ara[i][j]);
+        }
+        printf("\n\n");
+
+    }
+
+    return 0;
+}

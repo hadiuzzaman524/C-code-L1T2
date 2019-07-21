@@ -1,0 +1,41 @@
+
+#include <math.h>
+#include <stdio.h>
+#include <conio.h>
+#include <graphics.h>
+#include <dos.h>
+
+int main()
+{
+int gd=DETECT,gm;
+initgraph(&gd,&gm,"C\\TC\\BGI");
+int xinc=5,yinc=5,r=10;
+
+while(!kbhit()!=0)
+{
+    xinc=xinc+5;
+    yinc=yinc+5;
+    r++;
+
+    if(xinc>=630)
+    {
+        xinc=-xinc;
+    }
+    if(yinc>=470)
+    {
+        yinc=-yinc;
+    }
+    if(r==25)
+    {
+        r=-r;
+    }
+    setfillstyle(1,rand());
+    circle(abs(xinc),abs(yinc),abs(r));
+
+    floodfill(abs(xinc),abs(yinc),WHITE);
+    delay(10);
+    cleardevice();
+}
+getch();
+closegraph();
+}

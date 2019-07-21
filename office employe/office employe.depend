@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1534187096 source:c:\users\md hadiuzzaman\desktop\programming\office employe\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

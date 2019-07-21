@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <conio.h>
+#include <graphics.h>
+#include <stdlib.h>
+#include <dos.h>
+
+int main()
+{
+
+int x=400,y=300,r=25,x1=300,r1=27;
+
+int gd=DETECT,gm;
+initgraph(&gd,&gm,"c\\tc\\bgi");
+setfillstyle(2,4);
+
+for(int i=0; i<=500; i++)
+{
+  circle(x+i,y,r1);
+
+circle(x1+i,y,r);
+line(300+i,300,400+i,300);
+line(300+i,300,335+i,217);
+line(318+i,260,400+i,300);
+line(300+i,300,410+i,267);
+circle(400+i,250,7);
+
+delay(100);
+cleardevice();
+
+
+}
+
+line(20,400,500,400);
+
+
+
+getch();
+closegraph();
+}

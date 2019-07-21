@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char name[10][40];
+    int roll[10];
+    FILE *file;
+    file=fopen("ashrafi.txt","w");
+
+    if(file==NULL)
+    {
+        printf("this file is not opened");
+    }
+    else
+    {
+    printf("the file is successfully open\n\n enter name and roll:");
+    for(int i=0; i<9;i++)
+    {
+        scanf("%[^\n] %d\n",name[i],&roll[i]);
+    }
+    scanf("%[^\n] %d",name[9],&roll[9]);
+
+
+    for(int i=0; i<9; i++)
+    {
+       printf("name is : %s \t\t roll is : %d\n",name[i],roll[i]);
+    }
+
+
+       printf("name is : %s \t\t roll is : %d\n",name[9],roll[9]);
+    }
+    return 0;
+}

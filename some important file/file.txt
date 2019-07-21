@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+    char name[10][25];
+    int roll[29],id_no[10];
+    float result[67];
+
+
+    FILE *file;
+    file=fopen("studenta.txt","w");
+    if(file == NULL)
+    {
+        printf("the file is not create");
+
+    }
+    else
+    {
+        printf("the file is create successfully\n\n");
+        for(int i=0; i<2; i++)
+        {
+
+            printf("enter the student name:");
+            scanf("%[^\n]",name[i]);
+            printf("enter the student roll:");
+            scanf("%d",&roll[i]);
+            printf("enter the student id:");
+            scanf("%d",&id_no[i]);
+            printf("enter the student result:");
+            scanf("%f",&result[i]);
+            printf("\n");
+            fflush(stdin);
+
+
+            fprintf(file,"name:%s\nroll:%d\nid no:%d\nresult:%lf\n",name,roll,id_no,result);
+
+
+        }
+    }
+
+
+    return 0;
+}
+
